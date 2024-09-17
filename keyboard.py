@@ -2,25 +2,25 @@ import pygame
 
 pygame.init()
 
-background : pygame.surface.Surface = pygame.display.set_mode((400, 360))
+background: pygame.surface.Surface = pygame.display.set_mode((400, 360))
 
 pygame.display.set_caption("SONOL")
 
 play: bool = True
 
-fps : pygame.time.Clock = pygame.time.Clock()
+fps: pygame.time.Clock = pygame.time.Clock()
 
-x_pos : int = background.get_size()[0]//2
-y_pos : int = background.get_size()[1]//2
+x_pos: int = background.get_size()[0]//2
+y_pos: int = background.get_size()[1]//2
 
-to_x : int = 0
-to_y : int = 0
+to_x: int = 0
+to_y: int = 0
 
-BLACK : tuple = (0, 0, 0)
-WHITE : tuple = (255, 255, 255)
+BLACK: tuple = (0, 0, 0)
+WHITE: tuple = (255, 255, 255)
 
 while(play):
-    deltaTime : int = fps.tick(60)
+    deltaTime: int = fps.tick(60)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             play = False
